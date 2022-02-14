@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Marketing &amp; Quality Data | Lead Me Media</title>
+		<meta name="google-site-verification" content="A7G0vJJ-TRkTlgZB7JEtMlZzeoipLQhVVPu0gG4_KkU" />
+		<meta name="keywords" content="internet marketing, email, email marketing, media advertising, double opt in email, double opt-in email, database mailing, direct mailing, opt in, list, direct marketing, lead generation, online advertising, opt in email lists, targeted, email marketing company, marketing service, html email, append, appending, website design, web site designing, client data mailing, online tracking, submission, double confirmed, internet brochure, ibrochures">
+		<meta name="description" content="Lead Me Media is a leading provider of multichannel marketing lists and best-in-class database services; including the most unique and highly deliverable data for direct mail, opt in e-mail, telemarketing and demographic append initiatives." />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="style.css">
+		<link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
+	</head>
+	<body class="sub">
+		<header id="header">
+			<div class="wrapper clearfix">
+				<div class="span12 clearfix">
+					<div class="span4">
+						<a href="http://client.marksleblanc.com/leadme/" class="home">
+							<img src="images/leadme-media-logo-sm.png" alt="" class="logo">
+						</a>
+					</div>
+					<nav id="nav" class="span7 right mobilehide">
+						<a href="index.html#section-2">Unique</a>
+						<a href="index.html#section-3">Strategy</a>
+						<a href="index.html#section-4">Story</a>
+						<a href="index.html#section-5">Media Kit</a>
+						<a href="index.html#section-6">Connect</a>
+					</nav>
+					<select name="mobilenav" id="mobilenav" class="mobileshow">
+						<option value="">Navigate</option>
+						<option value="index.html#section-2">Unique</option>
+						<option value="index.html#section-3">Strategy</option>
+						<option value="index.html#section-4">Story</option>
+						<option value="index.html#section-5">Media Kit</option>
+						<option value="index.html#section-6">Connect</option>
+					</select>
+				</div>
+			</div>
+		</header>
+		<section id="sections">
+			<div class="section" id="section-0">
+				<div class="wrapper clearfix">
+					<div class="span12">
+						<h1 class="p30">Unsubscribe</h1>
+						<h5>Lead Me Media, our Affiliates, and Partners are sorry to see you go. We hope we can better serve you in the future.</h5>
+						<p>Simply fill in the fields below that you would like to be removed from and click submit. No fields are required but remember the more information given the more thorough we can be with your remove process. We are very strict on protecting information about our members whether they are past or present so rest assured your information will remain private and secure in our remove vault server. You can visit our <a href="privacy.html">Privacy Policy Here</a>.</p>
+						<p><span class="req">*</span> Denotes required fields</p>
+						<br>
+						<form action="remove.php" id="contact-form" method="POST" class="span11 center">
+							<div class="clearfix">
+								<ul class="forms spaced span5">
+									<li>
+										<label>First Name <span class="req">*</span></label>
+										<input placeholder="First Name" type="text" name="firstname" id="firstname" required />
+									</li>
+				                    <li>
+				                    	<label>Last Name <span class="req">*</span></label>
+				                    	<input placeholder="Last Name" type="text" name="lastname" id="lastname" />
+				                    </li>
+									<li>
+										<label>Email Address <span class="req">*</span></label>
+										<input placeholder="Email" type="text" name="email1" id="email1"  required />
+									</li>
+			                        <li>
+			                        	<label>Secondary Email Address</label>
+			                        	<input placeholder="Additional Email" type="text" name="email2" id="email2"  />
+			                        </li>
+		                        	<li>
+			                        	<label>Mobile Number</label>
+			                        	<input placeholder="Mobile Number" type="text" name="mobile" id="Mobile Number" />
+			                        </li>
+		                        </ul>
+		                        <ul class="forms spaced span5">
+			                        
+									<li>
+										<label>Home Phone Number</label>
+										<input placeholder="Home Phone Number" type="text" name="homephone" id="Home Phone Number"  />
+									</li>
+			                        <li>
+			                        	<label>Home Postal Address</label>
+			                        	<textarea name="homeaddress" placeholder="Home Postal Address" id="Home Postal Address" wrap="virtual"></textarea>
+			                        </li>
+					                <li>
+					                	<label>Business Postal Address</label>
+					                	<textarea name="businessaddress" placeholder="Business Postal Address" id="Business Postal Address" wrap="virtual"></textarea>
+					                </li>
+								</ul>
+							</div>
+							<div class="span4 center">
+								<br>
+								<input type="submit" name="Submit" id="Submit" value="Submit" class="btn" />
+							</div>
+							<div id="feedback" class="tc"><p></p></div>
+                        </form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer id="footer">
+			<div class="wrapper clearfix">
+				<div class="span12">
+					<p>&copy; LeadMe Media. All rights reserved. | <a href="/leadme/terms.html">Terms</a> | <a href="/leadme/privacy.html">Privacy</a> | <a href="/leadme/unsubscribe.html">Remove</a></p>
+				</div>
+			</div>
+		</footer>
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.0.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				var form = $(this);
+				var post_url = form.attr('action');
+				var post_data = form.serialize();
+				$('#contact-form').submit(function(e){
+					e.preventDefault();
+					$('#feedback p').html('Submitting...');
+					var form = $(this);
+					var post_url = form.attr('action');
+					var post_data = form.serialize();
+					var valid  = true;
+					var firstInput = null;
+					$('.required').each(function(){
+						var value = $(this).val();
+						if (value == ''){
+							$(this).addClass('error');
+							valid=false;
+							if(firstInput == null){
+								firstInput = $(this);
+								$('#feedback p').html('');
+								$('#feedback p').html('Please fill in the required fields.');
+							}
+						} else {
+							valid=true;
+						}
+					});
+					$.ajax({
+						type: 'POST',
+						url: post_url,
+						data: post_data,
+						success: function(msg){
+							$(this).removeClass('error');
+							$('#feedback p').html('');
+							$('#feedback p').html(msg);
+							if(msg == 'Please enter a valid email address.'){
+								$('#email1').addClass('error');
+							} else if (msg == 'Thanks. Your email was sent successfully.'){
+								$('form input').add('form textarea').each(function(){
+									$(this).val(' ');
+								});
+								$('.required').removeClass('error');
+							}
+						},
+						error: function(msg){
+							$('#feedback p').html('');
+							$('#feedback p').html(msg);
+						}
+					});
+				});
+			});
+		</script>
+	</body>
+</html>
